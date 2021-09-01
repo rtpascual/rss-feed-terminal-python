@@ -12,7 +12,7 @@ def request_urls():
         urls.append(user_input)
     return urls
 
-def print_items(url):
+def print_item(url):
     rss_items = rssreader.rssReader(url).get_rss_items()
     for item in rss_items:
         print(f'Title: {item.title}')
@@ -24,7 +24,7 @@ def main():
     urls = request_urls()
     
     for url in urls:
-        print_items(url)
+        print_item(url)
 
 if __name__ == '__main__':
     main()
